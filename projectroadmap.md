@@ -10,10 +10,10 @@ To start, I looked at some other python projects that had to do with stat tracki
 By looking at and running the code, I came up with some ideas to add to my project. Some of these ideas include having percentages of hits, sets, and, serves made rather than just keeping track of misses and makes.
 
 # Sprint 2
-- [ ] Begin coding
-- [ ] Make small updates and commit messages with them
-- [ ] Commit at least 6 code changes
-- [ ] Update tasts on the roadmap
+- [x] Begin coding
+- [x] Make small updates and commit messages with them
+- [x] Commit at least 6 code changes
+- [x] Update tasks on the roadmap
 
 # Sprint 3
 - [ ] Continue coding
