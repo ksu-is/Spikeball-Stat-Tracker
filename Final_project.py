@@ -1,31 +1,31 @@
-total_games = 0 #
-total_wins = 0 #
-total_losses = 0 #
-total_breaks = 0 #
-total_broken = 0 #
-total_errors = 0 #
-total_serves = 0 #
-total_serves_made = 0 #
-total_serves_missed = 0 #
-total_double_faults = 0 #
-total_aces = 0 #
-total_aced = 0 #
-total_hits = 0 #
-total_hitting_errors = 0 #
-total_put_aways = 0 #
-total_hits_missed = 0 #
-total_hits_on = 0 #
+total_games = 0 
+total_wins = 0 
+total_losses = 0 
+total_breaks = 0 
+total_broken = 0 
+total_errors = 0 
+total_serves = 0 
+total_serves_made = 0 
+total_serves_missed = 0 
+total_double_faults = 0 
+total_aces = 0 
+total_aced = 0 
+total_hits = 0 
+total_hitting_errors = 0 
+total_put_aways = 0 
+total_hits_missed = 0 
+total_hits_on = 0 
 total_weak_hits = 0
-total_hits_returned = 0 #
-total_sets = 0 #
-total_strong_sets = 0 #
-total_weak_sets = 0 #
-total_set_errors = 0 #
-total_defensive_touches = 0 #
+total_hits_returned = 0 
+total_sets = 0 
+total_strong_sets = 0 
+total_weak_sets = 0 
+total_set_errors = 0 
+total_defensive_touches = 0 
 total_strong_defensive_touches = 0
 total_weak_defensive_touches = 0
-total_strong_recieves = 0 #
-total_weak_recieves = 0 #
+total_strong_recieves = 0 
+total_weak_recieves = 0 
 total_strong_plays = 0 
 total_weak_plays = 0
 
@@ -270,27 +270,37 @@ while True:
     total_losses = total_games - total_wins #calculate number of games lost using total games and games won
     tournaments_losses = tournament_games - tournament_wins
 
+    total_serves_made_percent = total_serves_made / total_serves * 100  #calculates percentage of serves made
+    tournament_serves_made_percent = tournament_serves_made / tournament_serves * 100
+
     total_strong_plays = total_strong_recieves + total_strong_sets + total_put_aways + total_strong_defensive_touches   #calculates number of strong plays
     tournament_strong_plays = tournament_strong_recieves + tournament_strong_sets + tournament_put_aways + tournament_strong_defensive_touches
 
     total_weak_plays = total_weak_recieves + total_weak_sets + total_weak_hits + total_weak_defensive_touches   #calculates number of weak plays
     tournament_weak_plays = tournament_weak_recieves + tournament_weak_sets +tournament_weak_hits + tournament_weak_defensive_touches
 
-    total_hitting_spr = 20 - (20 * total_hits_returned / total_hits)
+    total_hitting_spr = 20 - (20 * total_hits_returned / total_hits)    #calculates hitting spikeball player rating
     tournament_hitting_spr = 20 - (20 *tournament_hits_returned / tournament_hits)
 
-    total_defense_spr = .4 * total_hitting_spr * total_strong_defensive_touches + total_weak_defensive_touches
+    total_defense_spr = .4 * total_hitting_spr * total_strong_defensive_touches + total_weak_defensive_touches  #calculates defense spikeball player rating
     tournament_defense_spr = .4 * tournament_hitting_spr * tournament_strong_defensive_touches + tournament_weak_defensive_touches
 
-    total_efficiency_spr = 20 - 5 * total_errors - 2 * (total_weak_plays + total_aced)
+    total_efficiency_spr = 20 - 5 * total_errors - 2 * (total_weak_plays + total_aced)  #calculates efficiency spikeball player rating
     tournament_efficiency_spr = 20 - 5 * tournament_errors - 2 * (tournament_weak_plays + tournament_aced)
 
-    total_serving_spr = 5.5 * total_aces + 15 * (total_serves_made / total_serves)
+    total_serving_spr = 5.5 * total_aces + 15 * (total_serves_made / total_serves)  #calculates serving spikeball player rating
     tournament_serving_spr = 5.5 * tournament_aces + 15 * (tournament_serves_made / tournament_serves)
 
-    total_spr = 1.57 * (total_hitting_spr + total_defense_spr + total_serving_spr + total_efficiency_spr)
+    total_spr = 1.57 * (total_hitting_spr + total_defense_spr + total_serving_spr + total_efficiency_spr)   #calculates total spikeball player rating
     tournament_spr = 1.57 * (tournament_hitting_spr + total_defense_spr + tournament_serving_spr + total_efficiency_spr)
 
     break
 
-print("")
+print("\n\nLet's take a look at your stats from this tournament!\n")
+print("You made a total of", tournament_serves_made, "serves out of", tournament_serves, "total serves, with a successful serving percentage of", tournament_serves_made_percent, "%.")
+if tournament_serves_made_percent > total_serves_made_percent:
+    print("Congrats! Your serving percentage this tournament is better than your average serving percentage!")
+else:
+    print("Your serving percentage isn't quite up to your average serving percentage. That may be something you want to work on!\n")
+print("That means you missed a total of", tournament_serves_missed, "serves and double faulted", tournament_double_faults, "times.\n\n")    #gives user information about serving
+print("Test")
