@@ -273,6 +273,9 @@ while True:
     total_serves_made_percent = total_serves_made / total_serves * 100  #calculates percentage of serves made
     tournament_serves_made_percent = tournament_serves_made / tournament_serves * 100
 
+    total_hits_made_percent = total_hits_on / total_hits * 100  #calculates percentage of hits made 
+    tournament_hits_made_percent = tournament_hits_on / tournament_hits * 100
+
     total_strong_plays = total_strong_recieves + total_strong_sets + total_put_aways + total_strong_defensive_touches   #calculates number of strong plays
     tournament_strong_plays = tournament_strong_recieves + tournament_strong_sets + tournament_put_aways + tournament_strong_defensive_touches
 
@@ -297,10 +300,14 @@ while True:
     break
 
 print("\n\nLet's take a look at your stats from this tournament!\n")
-print("You made a total of", tournament_serves_made, "serves out of", tournament_serves, "total serves, with a successful serving percentage of", tournament_serves_made_percent, "%.")
+print("Serving: \n\tTotal serves:", tournament_serves, "\n\tServes made:", tournament_serves_made, "\n\tServes missed:", tournament_serves_missed, "\n\tDouble faults:", tournament_double_faults, "\n\tAces:", tournament_aces, "\n\tServing percentage:", tournament_serves_made_percent, "%")    #gives user info about their serving
 if tournament_serves_made_percent > total_serves_made_percent:
     print("Congrats! Your serving percentage this tournament is better than your average serving percentage!")
 else:
-    print("Your serving percentage isn't quite up to your average serving percentage. That may be something you want to work on!\n")
-print("That means you missed a total of", tournament_serves_missed, "serves and double faulted", tournament_double_faults, "times.\n\n")    #gives user information about serving
-print("Test")
+    print("\nYour serving percentage isn't quite up to your average serving percentage. That may be something you want to work on!\n")
+
+print("\nHitting: \n\tTotal hits:", tournament_hits, "\n\tHits on net:", tournament_hits_on, "\n\tHits missed:", tournament_hits_missed, "\n\tPut aways:", tournament_put_aways, "\n\tWeak hits:", tournament_weak_hits, "\n\tHitting errors:", tournament_hitting_errors, "\n\tHitting percentage:", tournament_hits_made_percent, "%")
+if tournament_hits_made_percent > total_hits_made_percent:
+    print("Congrats! Your hitting percentage this tournament is better than your average hitting percentage!")
+else:
+    print("\nYour hitting percentage isn't quite up to your average hitting percentage. That may need to be something you need to work on!\n")
