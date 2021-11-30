@@ -16,5 +16,5 @@ By looking at and running the code, I came up with some ideas to add to my proje
 - [x] Update tasks on the roadmap
 
 # Sprint 3
-- [ ] Continue coding
-- [ ] Create PowerPoint slide
+- [x] Continue coding
+- [x] Create PowerPoint slide
