@@ -339,9 +339,9 @@ def spikeball():
 
     print("\nDefense: \n\tDefensive touches:", total_defensive_touches, "\n\tStrong defensive touches:", total_strong_defensive_touches, "\n\tWeak defensive touches:", total_weak_defensive_touches, "\n\tNumber of times aced:", total_aced, "\n\tStrong receives:", total_strong_recieves, "\n\tWeak receives:", total_weak_recieves)  #gives user info about defense
 
-    print("\nTotals:\n\tTotal games:", total_games, "\n\tGames won:", total_wins, "\n\tGames lost:", total_losses, "\n\tTotal breaks:", total_breaks, "\n\tTotal broken:", total_broken, "\n\tErrors:", total_errors, "\n\tStrong plays:", total_strong_plays, "\n\tWeak plays:", total_weak_plays, "\n")  #gives user info about totals
+    print("\nTotals:\n\tTotal games:", total_games, "\n\tGames won:", total_wins, "\n\tGames lost:", total_losses, "\n\tTotal breaks:", total_breaks, "\n\tTotal broken:", total_broken, "\n\tErrors:", total_errors, "\n\tStrong plays:", total_strong_plays, "\n\tWeak plays:", total_weak_plays)  #gives user info about totals
 
-    print("\SPR's: \n\tHitting:", total_hitting_spr, "\n\tDefense:", total_defense_spr, "\n\tEfficiency:", total_efficiency_spr, "\n\tServing:", total_serving_spr, "\n\tTotal:", total_spr)   #gives user info about different SPR's
+    print("\nSPR's: \n\tHitting:", total_hitting_spr, "\n\tDefense:", total_defense_spr, "\n\tEfficiency:", total_efficiency_spr, "\n\tServing:", total_serving_spr, "\n\tTotal:", total_spr)   #gives user info about different SPR's
 
 spikeball()
 
