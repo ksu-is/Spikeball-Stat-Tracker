@@ -62,7 +62,7 @@ def spikeball():
         tournament_strong_plays = 0
         tournament_weak_plays = 0
 
-        games = input("Please enter the number of games played: ")
+        games = input("Please enter the number of games played: ")  #ask user for input about number of games played
         games_int = int(games)
         total_games += games_int
         tournament_games += games_int
@@ -346,7 +346,7 @@ def spikeball():
 spikeball()
 
 while True:
-    cont = input("Would you like to add stats from another tournament? Y or N: ")
+    cont = input("Would you like to add stats from another tournament? Y or N: ")   #asks if user would like to add stats from another tournament
     if cont.lower() == "y":
         spikeball()
     elif cont.lower() == "n":
